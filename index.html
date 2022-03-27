@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <title>Wedding Invite Maker</title>
+</head>
+<body>
+<head>
+    <h1>WEDDING INVITE MAKER</h1>
+</head>
+<div class="container">
+    <div id="column1">
+            <div id="details">
+                <h2>DETAILS</h2>
+                <form>
+                    <label for="fname">First name</label><br>
+                    <input type="text" id="fname" name="fname" oninput="coupleNames()"><br>
+
+                    <label for="sname">Second name</label><br>
+                    <input type="text" id="sname" name="sname" oninput="coupleNames()"><br>
+
+                    <label for="date">Date</label><br>
+                    <input type="date" id="date" name="date" value="" oninput="weddingDate()"><br>
+
+                    <label for="location">Location</label><br>
+                    <input type="text" id="location" name="location" oninput="weddingLocation()"><br>
+
+                    <label for="comment">RSVP</label><br>
+                    <textarea maxlength="38" rows="2" id="more-info" name="comment" oninput="rsvpDate()"></textarea>
+                    </form>
+                    <h2>THEME</h2>
+                    <div class="theme">
+                        <div id="thumb1">
+                            <img src="./assets/simple.jpg" width="120px" alt="simple invite" onclick="simpleBG()">
+                        </div>
+                        <div id="thumb1">
+                            <img src="./assets/floral.jpg" width="120px" alt="floral invite" onclick="floralBG()">
+                        </div>
+                        <div id="thumb1">
+                            <img src="./assets/frame.jpg" width="120px" alt="frame invite" onclick="frameBG()">
+                        </div>
+                    </div>
+            </div>
+            </div>
+
+    <div id="column2">
+        <h2>YOUR DESIGN</h2>
+            <div id="invite">
+                <div class="inviteContent">
+                    <div class="invite-input">
+                        <p>PLEASE JOIN US TO CELEBRATE THE WEDDING OF</p>
+                    </div>
+                    <div class="invite-input">
+                        <p id="coupleNames">&nbsp;</p>
+                    </div>
+                    <div class="invite-input">
+                        <p id="second-name">&nbsp;</p>
+                    </div>
+                    <div class="invite-input">
+                        <p id="wedding-date">&nbsp;</p>
+                    </div>
+                    <div class="invite-input">
+                        <p id="wedding-location">&nbsp;</p>
+                    </div>
+                    <div class="invite-input">
+                        <p id="wedding-info">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy Elegent Wedding Card Designs 2022</p>
+</footer>
+
+    <script src="./javascript/index.js"></script>
+</body>
+</html>
