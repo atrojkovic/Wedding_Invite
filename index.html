@@ -5,68 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/stylesheet.css">
-    <title>Wedding Invite Maker</title>
-</head>
-<body>
-<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Lobster&family=Montserrat:wght@300&family=Playfair+Display:ital@1&family=Roboto:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+    <body>
+<header>
+    
     <h1>WEDDING INVITE MAKER</h1>
-</head>
+    
+</header>
 <div class="container">
-    <div id="column1">
+        <div id="column1">
             <div id="details">
                 <h2>DETAILS</h2>
                 <form>
                     <label for="fname">First name</label><br>
-                    <input type="text" id="fname" name="fname" oninput="coupleNames()"><br>
+                    <input type="text" id="fname" name="fname" maxlength="15" oninput="coupleNames()"><br>
 
                     <label for="sname">Second name</label><br>
-                    <input type="text" id="sname" name="sname" oninput="coupleNames()"><br>
+                    <input type="text" id="sname" name="sname" maxlength="17" oninput="coupleNames()"><br>
 
                     <label for="date">Date</label><br>
-                    <input type="date" id="date" name="date" value="" oninput="weddingDate()"><br>
+                    <input type="text" id="date" name="date" value="" oninput="weddingDate()"><br>
 
-                    <label for="location">Location</label><br>
-                    <input type="text" id="location" name="location" oninput="weddingLocation()"><br>
+                    <label for="venue">Venue Name</label><br>
+                    <input type="text" id="venue" name="venue" oninput="weddingVenue()"><br>
+
+                    <label for="address">Address</label><br>
+                    <input type="text" id="address" name="address" oninput="weddingAddress()"><br>
 
                     <label for="comment">RSVP</label><br>
-                    <textarea maxlength="38" rows="2" id="more-info" name="comment" oninput="rsvpDate()"></textarea>
-                    </form>
-                    <h2>THEME</h2>
-                    <div class="theme">
-                        <div id="thumb1">
-                            <img src="./assets/simple.jpg" width="120px" alt="simple invite" onclick="simpleBG()">
-                        </div>
-                        <div id="thumb1">
-                            <img src="./assets/floral.jpg" width="120px" alt="floral invite" onclick="floralBG()">
-                        </div>
-                        <div id="thumb1">
-                            <img src="./assets/frame.jpg" width="120px" alt="frame invite" onclick="frameBG()">
-                        </div>
-                    </div>
-            </div>
+                    <textarea  rows="2" id="more-info" name="comment" maxlength="" oninput="rsvpDate()"></textarea>
+                </form>
             </div>
 
-    <div id="column2">
+        </div>
+
+        <div id="column2">
+            <h2>THEME</h2>
+            <div id="thumb1">
+                <img src="./assets/simple-frame.jpg" alt="simple invite" onclick="simpleBG()">
+            </div>
+            <div id="thumb1">
+                 <img src="./assets/floral.jpg" alt="floral invite" onclick="floralBG()">
+            </div>
+            <div id="thumb1">
+                <img src="./assets/frame.jpg" alt="frame invite" onclick="frameBG()">
+            </div>
+        </div>
+
+    <div id="column3">
         <h2>YOUR DESIGN</h2>
             <div id="invite">
                 <div class="inviteContent">
                     <div class="invite-input">
-                        <p>PLEASE JOIN US TO CELEBRATE THE WEDDING OF</p>
+                        <p id="intro"></p>
                     </div>
                     <div class="invite-input">
                         <p id="coupleNames">&nbsp;</p>
                     </div>
                     <div class="invite-input">
-                        <p id="second-name">&nbsp;</p>
-                    </div>
-                    <div class="invite-input">
                         <p id="wedding-date">&nbsp;</p>
                     </div>
                     <div class="invite-input">
-                        <p id="wedding-location">&nbsp;</p>
+                        <span id="wedding-venue">&nbsp;</span><br><span id="wedding-address">&nbsp;</span>
                     </div>
                     <div class="invite-input">
-                        <p id="wedding-info">&nbsp;</p>
+                        <span id="rsvp">&nbsp;</span><br><span id="wedding-info">&nbsp;</span>
                     </div>
                 </div>
             </div>

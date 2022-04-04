@@ -1,34 +1,55 @@
 * {box-sizing:border-box;}
 
+/*body {
+    background-image: url("../assets/wedding_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
 
 h1, h2 {
+    font-family: 'Montserrat', sans-serif; 
     text-align: center;
 }
 
-
-
-.container {
-margin: auto;
-width: 80%;
-display: flex;
-flex-direction: row;
-justify-content: center;
+header img  {
+    display:inline;
+    width: 40px;
 }
 
+.container {
+    margin: auto;
+    display: flex;
+    width: 1000px;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    }
+
+
+#thumb1 img {
+    border: 1px solid black;
+    width: 120px;
+}
+
+
 #column1 {
-    background-color: blue;
-    width: 500px;
+    width: 20%;
+    text-align: center;
 }
 
 #column2 {
-    background-color: red;
-    width: 500px;
+    width: 20%;
+
+    text-align: center;
+}
+
+#column3 {
+    width: 60%;
 }
 
 #details{
     margin: auto;
-    width: 400px;
-    background-color: yellow;
 }
 
     
@@ -39,29 +60,28 @@ justify-content: center;
 
 #invite {
     margin: auto;
+    border: 1px solid black;
     width: 400px;
     height: 500px;
     background-color: green;
-    background-image: url("../assets/floral.jpg");
+    background-image: url("../assets/simple.jpg");
     background-size: cover;
     padding-top: 120px;
 }
 
 
 .inviteContent {
-    border: solid pink 3px;
-    height: 300px;
     width: 300px;
     margin: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 6;
+    gap: 2px;
 }
 
 .invite-input{
-    
-    background-color: brown;
     width: 280px;
     margin: auto;
     text-align: center;
@@ -70,7 +90,6 @@ justify-content: center;
 
 form {
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
 }
 
 input {
@@ -79,7 +98,6 @@ input {
     width : 150px;
     height: 30px;
     margin-bottom: 15px;
-    
   }
 
 textarea {
@@ -88,7 +106,7 @@ textarea {
 }
 
 footer p {
+    font-family: 'Montserrat', sans-serif; 
     text-align: center;
 }
-
 
